@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+
+		<style>
+			#login .input-field{
+				width: 300px;
+  height: 60px;
+  margin: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+  border:none;
+  color: gray;
+  background-color: #F7F9FA;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+	outline: none;
+	margin-left: 120px;
+
+			}
+	
+    #login .submit{
+		width: 150px;
+   /* text-align: center; */
+  height: 60px;
+  margin-left: 100px;
+  font-size: 25px;
+  border-radius: 10px;
+  border:none;
+  color: green;
+   outline: none;
+  /* background-color: rgb(221, 212, 212); */
+  background-color: #F7F9FA;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+	}
+
+	.RegisterBtn{
+		width: 150px;
+   /* text-align: center; */
+  height: 60px;
+  font-size: 25px;
+  border-radius: 10px;
+  border:none;
+  color: green;
+   outline: none;
+  /* background-color: rgb(221, 212, 212); */
+  background-color: #F7F9FA;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+	}
+
+		</style>
+	</head>
+	<body style="margin-left: auto; margin-right:auto; display:block; margin-top:150px  ">
+		<h1 style="text-align: center; margin-top: 50px;">Login</h1>
+		<form id="login">
+			<input class="input-field" type="text" autocomplete="off" id="username" placeholder="Username" />
+			<input class="input-field" type="password" autocomplete="off" id="password" placeholder="Password" />
+			<input class="submit" type="submit" value="Login" />
+		</form>
+		<div class="logIninRegister" style="text-align: center;">
+			<h2 >Don't have account Register Here</h2>
+				<button class="RegisterBtn">
+				<a href="index.html" style="text-decoration: none ; color: green;">Register</a>
+				</button>
+			</div>
+		<script>
+			const form = document.getElementById('login')
+			form.addEventListener('submit', login)
+
+			async function login(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const password = document.getElementById('password').value
+
+				const result = await fetch('/api/login', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					console.log('Got the token: ', result.data)
+					localStorage.setItem('token', result.data)
+					alert('Success')
+					window.location.href = 'room.ejs';
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+	</body>
+</html>

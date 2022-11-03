@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<style>
+			#reg-form .input-field{
+				width: 300px;
+  height: 60px;
+  margin: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+  border:none;
+  color: gray;
+  background-color: #F7F9FA;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+	outline: none;
+	margin-left: 120px;
+
+			}
+	
+    #reg-form .submit{
+		width: 150px;
+   /* text-align: center; */
+  height: 60px;
+  margin-left: 100px;
+  font-size: 25px;
+  border-radius: 10px;
+  border:none;
+  color: green;
+   outline: none;
+  /* background-color: rgb(221, 212, 212); */
+  background-color: #F7F9FA;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+	}
+
+	.loginBtn{
+		width: 150px;
+   /* text-align: center; */
+  height: 60px;
+  font-size: 25px;
+  border-radius: 10px;
+  border:none;
+  color: green;
+   outline: none;
+  /* background-color: rgb(221, 212, 212); */
+  background-color: #F7F9FA;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+	}
+
+	.mainDiv1{
+		display: flex;
+		flex-direction: row;
+		margin-top: 60px;
+
+	}
+	.Left{
+		width: 40%;
+		float: left;
+		margin-left: 50px;
+	}
+	.Right{
+		width: 45%;
+		float: right;
+		margin-left: 100px;
+	}
+
+	.mainDiv3, .mainDiv4{
+		display: flex;
+		flex-direction: row;
+		margin-top: 60px;
+
+	}
+	.Left3, .Left4{
+		width: 30%;
+		float: left;
+		margin-left: 50px;
+	}
+	.Mid3, .Mid4{
+		width: 30%;
+		margin-left: 50px;
+	}
+	.Right3, .Right4{
+		width: 35%;
+		float: right;
+		margin-left: 100px;
+		margin-right: 40px;
+	}
+		</style>
+	</head>
+	<body>
+		<h1 style="margin-left: 40px; margin-right: 40px; text-align: center;">Video call and meeting facility for all.</h1>
+		<h3 style="margin-left: 50px; margin-right: 40px;">Google Meet is a service that's available to everyone on every device. It can be used for secure and high quality video meetings and calls.Bring your entire team to Google Meet. Here you can show business proposals, work together on chemistry assignments or even have a face-to-face conversation.</h3>
+		<h1 style="text-align: center; margin-top: 50px;">Registration</h1>
+		<form id="reg-form">
+			<input class="input-field" type="email" autocomplete="off" id="username" placeholder="Email" />
+			<input class="input-field" type="password" autocomplete="off" id="password" placeholder="Password" />
+			<input class="submit"  type="submit" value="Register" />
+		</form>
+		<div class="logIninRegister" style="text-align: center;">
+		<h2 >Already have account Login Here</h2>
+			<button class="loginBtn">
+			<a href="login.html" style="text-decoration: none ; color: green;">Login</a>
+			</button>
+		</div>
+		  
+		<div class="mainDiv1">
+			<div class="Left">
+				<h1>Use Meet on any device and from anywhere</h1>
+				<h3>Guests can join meetings and calls from their computer, using any modern web browser. They do not need to install any other software. On mobile devices, they can join meetings and calls from the Google Meet app. You can also join meetings and calls using Google Nest Hub Max.</h3>
+			
+			</div>
+			<div class="Right">
+				<img src="MeetImg.png" alt="">
+			</div>
+		</div>
+
+		<div class="mainDiv1">
+			<div class="Left">
+				<h1>Meet is for everyone</h1>
+				<h3>Google Meet makes meetings even easier with Live Captions powered by Google's speech recognition technology. Live captions make it easier to understand what's happening in a meeting with foreign language speakers and people with hearing loss. Plus, it's easy to follow a meeting in any noisy location with Live Caption (available in English only).</h3>
+			
+			</div>
+			<div class="Right">
+				<img src="MeAndFriend.png" alt="">
+			</div>
+		</div>
+
+		<div class="mainDiv3">
+			<div class="Left3">
+				<i class="fa fa-video-camera fa-3x"  aria-hidden="true" ></i>
+				<h2>stay connected to the meeting</h2>
+			<h4>With easy schedule creation, easy recording, and customizable layouts, people stay engaged.</h4>
+			</div>
+			<div class="Mid3">
+				<i class="fa fa-share-square-o fa-3x" aria-hidden="true"></i>
+				<h2>share your screen</h2>
+			<h4>Present your documents, slides, and spreadsheets by showing your entire screen or just one window.</h4>
+		</div>
+			<div class="Right3">
+				<i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
+				<h2>hosting a large meeting</h2>
+			<h4>You can invite people from the same domain or outside of that domain to the meeting. Their number should not exceed 500.</h4>
+		</div>
+		</div>
+		<div class="mainDiv4">
+			<div class="Left4">
+				<i class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
+				<h2>Join a meeting from your phone</h2>
+			<h4>Use the Google Meet app to join a video call, or join an audio-only call by calling the dialing number in the meeting call.</h4>
+		</div>
+			<div class="Mid4">
+				<i class="fa fa-check-square-o fa-3x" aria-hidden="true"></i>
+				<h2>making decisions about meetings</h2>
+		<h4>These meetings are secure by default. The host of the meeting can decide who will attend the meeting. Only people who have received permission to join the meeting from the host can participate in it.</h4>
+		</div>
+			<div class="Right4">
+				<i class="fa fa-bullhorn fa-3x" aria-hidden="true"></i>
+				<h2>broadcasting internal events</h2>
+		<h4>You can live stream events like town halls and sales meetings to up to 100,000 people in your domain</h4>
+		</div>
+		</div>
+
+		<script>
+			const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const password = document.getElementById('password').value
+
+				const result = await fetch('/api/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					window.location.href = 'login.html';
+
+					alert('Success')
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+	</body>
+</html>
